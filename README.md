@@ -53,7 +53,6 @@ You will need the name of the Azure Monitor data source on your Grafana server a
 
 Example: ./armclient --config.file=sample-azure.yml grafana production AzureMonitorDataSource microsoft.storage/storageaccounts
 
-In this example:
 production = This string is added to the title of the generated Grafana dashboard
 AzureMonitorDataSource = This is the name of the Azure Monitor data source on your Grafana server
 microsoft.storage/storageaccounts = This is the Azure Resource Manager (ARM) resource type
