@@ -24,13 +24,13 @@ Args:
   [&lt;maxcontinuation&gt;]       The max number of continuations to follow when calling ARM API. Default to 10.
 </pre>
   
-Prerequisite:
+<b>Prerequisite:</b>
 
 This assumes that you are familiar with Grafana and the Azure Monitor data source plugin.  For more information, please refer to the following article:
 
 https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitor-send-to-grafana
 
-How to use:
+<b>How to use:</b>
 
 1) Create a service principal which has Reader permission to access your Azure subscription.
 https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal
@@ -59,7 +59,7 @@ Example: ./armclient --config.file=sample-azure.yml grafana production AzureMoni
 
 The armclient tool will generate dashboard JSON files -- one for each region and one for all regions.
 
-For example, in the above example the following JSON files could be generated:
+In the above example the following JSON files could be generated:
 
 dashboard_production_microsoft_storage_storageaccounts_allregions.json		
 dashboard_production_microsoft_storage_storageaccounts_eastus.json		
@@ -67,3 +67,34 @@ dashboard_production_microsoft_storage_storageaccounts_southcentralus.json
 dashboard_production_microsoft_storage_storageaccounts_westcentralus.json	
 
 4) Import the dashboard JSON files into your Grafana server.
+
+5) Enjoy!
+
+<b>How to contribute</b>
+
+The armclient automatically pulls dashboard templates from this GitHub repository.  To contribute new dashboard templates, please following the following instructions.
+
+1) On your Grafana server, create a dashboard for a given Azure Resource Manager (ARM) resource type.
+Note: In your dashboard, you should only select single Azure resource for each of the charts.  The armclient tool will automatically replace all the Azure Monitor targets in the dashboard JSON using ARM resource IDs from the given Azure subscription.
+
+2) Export the dashboard to JSON. Save the JSON into a file called template.json.
+
+3) Anonymize the contents of template.json
+- Replace the data source name with {dataSourceName}<br>
+- Replace the resource group name with {resourceGroupName}<br>
+- Replace the resource name with {resourceName}<br>
+
+4) Create the following directory structure: &lt;ARM resource type&gt;/&lt;dashboard friendly name&gt;
+  
+For example, if you are creating a dashboard specific to Azure Storage account latencies, you could create the following directory structure:
+
+microsoft.storage/storageaccounts/latency
+
+5) In the new directory, create the following 3 files:
+- template.json : This is the dashboard template from step #3
+- dashboard.png : This is a sample screenshot of the dashboard.
+- README.md : This README contains the dashboard screenshot.
+
+6) Submit a pull request.
+
+7) After the pull request is merged, anyone who runs ./armclient grafana command for the given ARM resource type will generate dashboards using your template.
