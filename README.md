@@ -6,22 +6,21 @@ For details on the armclient tool, please refer to the following:<br>
 https://github.com/asheniam/armclient
 
 <pre>
-usage: armclient grafana &lt;title&gt; &lt;dataSource&gt; &lt;resourcetype&gt; [&lt;maxdashboardresource&gt;] [&lt;maxcontinuation&gt;]
-
+usage: armclient grafana --title=TITLE --datasource=DATASOURCE --resourcetype=RESOURCETYPE [&lt;flags&gt;]
+  
 Generate Grafana dashboard JSON files for given Azure resource type.
 
 Flags:
-  --help   Show context-sensitive help (also try --help-long and --help-man).
+  --help                       Show context-sensitive help (also try --help-long and --help-man).
   --config.file="sample-azure.yml"  
-           Azure configuration file
-  --debug  Debug flag
-
-Args:
-  &lt;title&gt;                   This will be used as prefix in the dashboard title
-  &lt;dataSource&gt;              The Azure Monitor data source name on Grafana
-  &lt;resourcetype&gt;            The Azure Resource Manager (ARM) resource type
-  [&lt;maxdashboardresource&gt;]  The max number of Azure resources to include in each dashboard. Default to 10.
-  [&lt;maxcontinuation&gt;]       The max number of continuations to follow when calling ARM API. Default to 10.
+                               Azure configuration file
+  --debug                      Debug flag
+  --title=TITLE                This will be used as prefix in the dashboard title
+  --datasource=DATASOURCE      The Azure Monitor data source name on Grafana
+  --resourcetype=RESOURCETYPE  The Azure Resource Manager (ARM) resource type
+  --kind=""                    The kind property on the Azure Resource Manager (ARM) resource type. This is optional.
+  --maxdashboardresource=10    The max number of Azure resources to include in each dashboard. Default to 10.
+  --maxcontinuation=10         The max number of continuations to follow when calling ARM API. Default to 10.
 </pre>
   
 <b>Prerequisite:</b>
@@ -51,7 +50,7 @@ Credentials:
 
 You will need the name of the Azure Monitor data source on your Grafana server and the ARM resource type that you want to generate dashboards.
 
-Example: ./armclient --config.file=sample-azure.yml grafana production AzureMonitorDataSource microsoft.storage/storageaccounts
+Example: ./armclient --config.file=sample-azure.yml grafana --title=production --datasource=AzureMonitorDataSource --resourcetype=microsoft.storage/storageaccounts
 
 - production = This string is added to the title of the generated Grafana dashboard<br>
 - AzureMonitorDataSource = This is the name of the Azure Monitor data source on your Grafana server<br>
@@ -61,10 +60,10 @@ The armclient tool will generate dashboard JSON files -- one for each region and
 
 In the above example the following JSON files could be generated:
 
-dashboard_production_microsoft_storage_storageaccounts_allregions.json		
-dashboard_production_microsoft_storage_storageaccounts_eastus.json		
-dashboard_production_microsoft_storage_storageaccounts_southcentralus.json	
-dashboard_production_microsoft_storage_storageaccounts_westcentralus.json	
+dashboard_production_microsoft_storage_storageaccounts_overview_allregions.json		
+dashboard_production_microsoft_storage_storageaccounts_overview_eastus.json		
+dashboard_production_microsoft_storage_storageaccounts_overview_southcentralus.json	
+dashboard_production_microsoft_storage_storageaccounts_overview_westcentralus.json	
 
 4) Import the dashboard JSON files into your Grafana server.
 
