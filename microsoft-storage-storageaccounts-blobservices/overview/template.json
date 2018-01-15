@@ -28,7 +28,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "AzureMonitorAndySubscription",
+          "datasource": "{dataSourceName}",
           "fill": 1,
           "id": 1,
           "legend": {
@@ -89,8 +89,8 @@
                 ],
                 "metricDefinition": "Microsoft.Storage/storageAccounts/blobServices",
                 "metricName": "Availability",
-                "resourceGroup": "andyelk",
-                "resourceName": "andyelkdiag594/default",
+                "resourceGroup": "{resourceGroupName}",
+                "resourceName": "{resourceName}",
                 "timeGrain": "1",
                 "timeGrainUnit": "minute"
               },
@@ -142,7 +142,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "AzureMonitorAndySubscription",
+          "datasource": "{dataSourceName}",
           "fill": 1,
           "id": 5,
           "legend": {
@@ -198,8 +198,8 @@
                 ],
                 "metricDefinition": "Microsoft.Storage/storageAccounts/blobServices",
                 "metricName": "BlobCapacity",
-                "resourceGroup": "andyelk",
-                "resourceName": "andyelkdiag594/default",
+                "resourceGroup": "{resourceGroupName}",
+                "resourceName": "{resourceName}",
                 "timeGrain": "1",
                 "timeGrainUnit": "minute"
               },
@@ -251,7 +251,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "AzureMonitorAndySubscription",
+          "datasource": "{dataSourceName}",
           "fill": 1,
           "id": 2,
           "legend": {
@@ -307,8 +307,8 @@
                 ],
                 "metricDefinition": "Microsoft.Storage/storageAccounts/blobServices",
                 "metricName": "BlobCount",
-                "resourceGroup": "andyelk",
-                "resourceName": "andyelkdiag594/default",
+                "resourceGroup": "{resourceGroupName}",
+                "resourceName": "{resourceName}",
                 "timeGrain": "1",
                 "timeGrainUnit": "minute"
               },
@@ -360,7 +360,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "AzureMonitorAndySubscription",
+          "datasource": "{dataSourceName}",
           "fill": 1,
           "id": 9,
           "legend": {
@@ -407,8 +407,8 @@
                 "dimensions": [],
                 "metricDefinition": "Microsoft.Storage/storageAccounts/blobServices",
                 "metricName": "ContainerCount",
-                "resourceGroup": "andyelk",
-                "resourceName": "andyelkdiag594/default",
+                "resourceGroup": "{resourceGroupName}",
+                "resourceName": "{resourceName}",
                 "timeGrain": "1",
                 "timeGrainUnit": "minute"
               },
@@ -472,7 +472,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "AzureMonitorAndySubscription",
+          "datasource": "{dataSourceName}",
           "fill": 1,
           "id": 3,
           "legend": {
@@ -536,8 +536,8 @@
                 ],
                 "metricDefinition": "Microsoft.Storage/storageAccounts/blobServices",
                 "metricName": "Transactions",
-                "resourceGroup": "andyelk",
-                "resourceName": "andyelkdiag594/default",
+                "resourceGroup": "{resourceGroupName}",
+                "resourceName": "{resourceName}",
                 "timeGrain": "1",
                 "timeGrainUnit": "minute"
               },
@@ -589,7 +589,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "AzureMonitorAndySubscription",
+          "datasource": "{dataSourceName}",
           "fill": 1,
           "id": 10,
           "legend": {
@@ -649,8 +649,8 @@
                 ],
                 "metricDefinition": "Microsoft.Storage/storageAccounts/blobServices",
                 "metricName": "Ingress",
-                "resourceGroup": "andyelk",
-                "resourceName": "andyelkdiag594/default",
+                "resourceGroup": "{resourceGroupName}",
+                "resourceName": "{resourceName}",
                 "timeGrain": "1",
                 "timeGrainUnit": "minute"
               },
@@ -702,7 +702,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "AzureMonitorAndySubscription",
+          "datasource": "{dataSourceName}",
           "fill": 1,
           "id": 4,
           "legend": {
@@ -762,8 +762,8 @@
                 ],
                 "metricDefinition": "Microsoft.Storage/storageAccounts/blobServices",
                 "metricName": "Egress",
-                "resourceGroup": "andyelk",
-                "resourceName": "andyelkdiag594/default",
+                "resourceGroup": "{resourceGroupName}",
+                "resourceName": "{resourceName}",
                 "timeGrain": "1",
                 "timeGrainUnit": "minute"
               },
@@ -827,7 +827,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "AzureMonitorAndySubscription",
+          "datasource": "{dataSourceName}",
           "fill": 1,
           "id": 6,
           "legend": {
@@ -887,8 +887,8 @@
                 ],
                 "metricDefinition": "Microsoft.Storage/storageAccounts/blobServices",
                 "metricName": "SuccessServerLatency",
-                "resourceGroup": "andyelk",
-                "resourceName": "andyelkdiag594/default",
+                "resourceGroup": "{resourceGroupName}",
+                "resourceName": "{resourceName}",
                 "timeGrain": "1",
                 "timeGrainUnit": "minute"
               },
@@ -940,7 +940,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "AzureMonitorAndySubscription",
+          "datasource": "{dataSourceName}",
           "fill": 1,
           "id": 7,
           "legend": {
@@ -1000,8 +1000,8 @@
                 ],
                 "metricDefinition": "Microsoft.Storage/storageAccounts/blobServices",
                 "metricName": "SuccessE2ELatency",
-                "resourceGroup": "andyelk",
-                "resourceName": "andyelkdiag594/default",
+                "resourceGroup": "{resourceGroupName}",
+                "resourceName": "{resourceName}",
                 "timeGrain": "1",
                 "timeGrainUnit": "minute"
               },
