@@ -92,7 +92,7 @@ microsoft.storage/storageaccounts/latency
 5) In the new directory, create the following 3 files:
 - template.json : This is the dashboard template from step #3
 - dashboard.png : This is a sample screenshot of the dashboard.
-- README.md : This README contains the dashboard screenshot.
+- README.md : This README contains the dashboard screenshot and a sample armclient command to generate the dashboard.
 
 6) Submit a pull request.
 
