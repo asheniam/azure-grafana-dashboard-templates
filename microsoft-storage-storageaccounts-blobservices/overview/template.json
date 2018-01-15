@@ -1,0 +1,1098 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "hideControls": false,
+  "id": 17,
+  "links": [],
+  "rows": [
+    {
+      "collapse": false,
+      "height": 269,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "AzureMonitorAndySubscription",
+          "fill": 1,
+          "id": 1,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "appInsights": {
+                "groupBy": "none",
+                "metricName": "select",
+                "timeGrainType": "auto"
+              },
+              "azureMonitor": {
+                "aggOptions": [
+                  "None",
+                  "Average",
+                  "Minimum",
+                  "Maximum",
+                  "Total",
+                  "Count"
+                ],
+                "aggregation": "Average",
+                "alias": "",
+                "dimension": "None",
+                "dimensionFilter": "*",
+                "dimensions": [
+                  {
+                    "text": "None",
+                    "value": "None"
+                  },
+                  {
+                    "text": "Geo type",
+                    "value": "GeoType"
+                  },
+                  {
+                    "text": "API name",
+                    "value": "ApiName"
+                  }
+                ],
+                "metricDefinition": "Microsoft.Storage/storageAccounts/blobServices",
+                "metricName": "Availability",
+                "resourceGroup": "andyelk",
+                "resourceName": "andyelkdiag594/default",
+                "timeGrain": "1",
+                "timeGrainUnit": "minute"
+              },
+              "expr": "",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "queryType": "Azure Monitor",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Availability %",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "AzureMonitorAndySubscription",
+          "fill": 1,
+          "id": 5,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "appInsights": {
+                "groupBy": "none",
+                "metricName": "select",
+                "timeGrainType": "auto"
+              },
+              "azureMonitor": {
+                "aggOptions": [
+                  "None",
+                  "Average",
+                  "Minimum",
+                  "Maximum",
+                  "Total",
+                  "Count"
+                ],
+                "aggregation": "Average",
+                "dimension": "None",
+                "dimensionFilter": "*",
+                "dimensions": [
+                  {
+                    "text": "None",
+                    "value": "None"
+                  },
+                  {
+                    "text": "Blob type",
+                    "value": "BlobType"
+                  }
+                ],
+                "metricDefinition": "Microsoft.Storage/storageAccounts/blobServices",
+                "metricName": "BlobCapacity",
+                "resourceGroup": "andyelk",
+                "resourceName": "andyelkdiag594/default",
+                "timeGrain": "1",
+                "timeGrainUnit": "minute"
+              },
+              "expr": "",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "queryType": "Azure Monitor",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Blob Capacity",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "AzureMonitorAndySubscription",
+          "fill": 1,
+          "id": 2,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "appInsights": {
+                "groupBy": "none",
+                "metricName": "select",
+                "timeGrainType": "auto"
+              },
+              "azureMonitor": {
+                "aggOptions": [
+                  "None",
+                  "Average",
+                  "Minimum",
+                  "Maximum",
+                  "Total",
+                  "Count"
+                ],
+                "aggregation": "Average",
+                "dimension": "None",
+                "dimensionFilter": "*",
+                "dimensions": [
+                  {
+                    "text": "None",
+                    "value": "None"
+                  },
+                  {
+                    "text": "Blob type",
+                    "value": "BlobType"
+                  }
+                ],
+                "metricDefinition": "Microsoft.Storage/storageAccounts/blobServices",
+                "metricName": "BlobCount",
+                "resourceGroup": "andyelk",
+                "resourceName": "andyelkdiag594/default",
+                "timeGrain": "1",
+                "timeGrainUnit": "minute"
+              },
+              "expr": "",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "queryType": "Azure Monitor",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Blob Count",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "AzureMonitorAndySubscription",
+          "fill": 1,
+          "id": 9,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "appInsights": {
+                "groupBy": "none",
+                "metricName": "select",
+                "timeGrainType": "auto"
+              },
+              "azureMonitor": {
+                "aggOptions": [
+                  "None",
+                  "Average",
+                  "Minimum",
+                  "Maximum",
+                  "Total",
+                  "Count"
+                ],
+                "aggregation": "Average",
+                "dimension": null,
+                "dimensionFilter": "*",
+                "dimensions": [],
+                "metricDefinition": "Microsoft.Storage/storageAccounts/blobServices",
+                "metricName": "ContainerCount",
+                "resourceGroup": "andyelk",
+                "resourceName": "andyelkdiag594/default",
+                "timeGrain": "1",
+                "timeGrainUnit": "minute"
+              },
+              "expr": "",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "queryType": "Azure Monitor",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Blob Container Count",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 251,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "AzureMonitorAndySubscription",
+          "fill": 1,
+          "id": 3,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 4,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "appInsights": {
+                "groupBy": "none",
+                "metricName": "select",
+                "timeGrainType": "auto"
+              },
+              "azureMonitor": {
+                "aggOptions": [
+                  "None",
+                  "Average",
+                  "Minimum",
+                  "Maximum",
+                  "Total",
+                  "Count"
+                ],
+                "aggregation": "Total",
+                "dimension": "None",
+                "dimensionFilter": "*",
+                "dimensions": [
+                  {
+                    "text": "None",
+                    "value": "None"
+                  },
+                  {
+                    "text": "Response type",
+                    "value": "ResponseType"
+                  },
+                  {
+                    "text": "Geo type",
+                    "value": "GeoType"
+                  },
+                  {
+                    "text": "API name",
+                    "value": "ApiName"
+                  }
+                ],
+                "metricDefinition": "Microsoft.Storage/storageAccounts/blobServices",
+                "metricName": "Transactions",
+                "resourceGroup": "andyelk",
+                "resourceName": "andyelkdiag594/default",
+                "timeGrain": "1",
+                "timeGrainUnit": "minute"
+              },
+              "expr": "",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "queryType": "Azure Monitor",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Transactions",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "AzureMonitorAndySubscription",
+          "fill": 1,
+          "id": 10,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 4,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "appInsights": {
+                "groupBy": "none",
+                "metricName": "select",
+                "timeGrainType": "auto"
+              },
+              "azureMonitor": {
+                "aggOptions": [
+                  "None",
+                  "Average",
+                  "Minimum",
+                  "Maximum",
+                  "Total",
+                  "Count"
+                ],
+                "aggregation": "Total",
+                "dimension": "None",
+                "dimensionFilter": "*",
+                "dimensions": [
+                  {
+                    "text": "None",
+                    "value": "None"
+                  },
+                  {
+                    "text": "Geo type",
+                    "value": "GeoType"
+                  },
+                  {
+                    "text": "API name",
+                    "value": "ApiName"
+                  }
+                ],
+                "metricDefinition": "Microsoft.Storage/storageAccounts/blobServices",
+                "metricName": "Ingress",
+                "resourceGroup": "andyelk",
+                "resourceName": "andyelkdiag594/default",
+                "timeGrain": "1",
+                "timeGrainUnit": "minute"
+              },
+              "expr": "",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "queryType": "Azure Monitor",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Ingress",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "AzureMonitorAndySubscription",
+          "fill": 1,
+          "id": 4,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 4,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "appInsights": {
+                "groupBy": "none",
+                "metricName": "select",
+                "timeGrainType": "auto"
+              },
+              "azureMonitor": {
+                "aggOptions": [
+                  "None",
+                  "Average",
+                  "Minimum",
+                  "Maximum",
+                  "Total",
+                  "Count"
+                ],
+                "aggregation": "Total",
+                "dimension": "None",
+                "dimensionFilter": "*",
+                "dimensions": [
+                  {
+                    "text": "None",
+                    "value": "None"
+                  },
+                  {
+                    "text": "Geo type",
+                    "value": "GeoType"
+                  },
+                  {
+                    "text": "API name",
+                    "value": "ApiName"
+                  }
+                ],
+                "metricDefinition": "Microsoft.Storage/storageAccounts/blobServices",
+                "metricName": "Egress",
+                "resourceGroup": "andyelk",
+                "resourceName": "andyelkdiag594/default",
+                "timeGrain": "1",
+                "timeGrainUnit": "minute"
+              },
+              "expr": "",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "queryType": "Azure Monitor",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Egress",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 259,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "AzureMonitorAndySubscription",
+          "fill": 1,
+          "id": 6,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "appInsights": {
+                "groupBy": "none",
+                "metricName": "select",
+                "timeGrainType": "auto"
+              },
+              "azureMonitor": {
+                "aggOptions": [
+                  "None",
+                  "Average",
+                  "Minimum",
+                  "Maximum",
+                  "Total",
+                  "Count"
+                ],
+                "aggregation": "Average",
+                "dimension": "None",
+                "dimensionFilter": "*",
+                "dimensions": [
+                  {
+                    "text": "None",
+                    "value": "None"
+                  },
+                  {
+                    "text": "Geo type",
+                    "value": "GeoType"
+                  },
+                  {
+                    "text": "API name",
+                    "value": "ApiName"
+                  }
+                ],
+                "metricDefinition": "Microsoft.Storage/storageAccounts/blobServices",
+                "metricName": "SuccessServerLatency",
+                "resourceGroup": "andyelk",
+                "resourceName": "andyelkdiag594/default",
+                "timeGrain": "1",
+                "timeGrainUnit": "minute"
+              },
+              "expr": "",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "queryType": "Azure Monitor",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Success Server Latency (ms)",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "AzureMonitorAndySubscription",
+          "fill": 1,
+          "id": 7,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "appInsights": {
+                "groupBy": "none",
+                "metricName": "select",
+                "timeGrainType": "auto"
+              },
+              "azureMonitor": {
+                "aggOptions": [
+                  "None",
+                  "Average",
+                  "Minimum",
+                  "Maximum",
+                  "Total",
+                  "Count"
+                ],
+                "aggregation": "Average",
+                "dimension": "None",
+                "dimensionFilter": "*",
+                "dimensions": [
+                  {
+                    "text": "None",
+                    "value": "None"
+                  },
+                  {
+                    "text": "Geo type",
+                    "value": "GeoType"
+                  },
+                  {
+                    "text": "API name",
+                    "value": "ApiName"
+                  }
+                ],
+                "metricDefinition": "Microsoft.Storage/storageAccounts/blobServices",
+                "metricName": "SuccessE2ELatency",
+                "resourceGroup": "andyelk",
+                "resourceName": "andyelkdiag594/default",
+                "timeGrain": "1",
+                "timeGrainUnit": "minute"
+              },
+              "expr": "",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "queryType": "Azure Monitor",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Success E2E Latency (ms)",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    }
+  ],
+  "schemaVersion": 14,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "timezone": "",
+  "title": "storage blob template",
+  "version": 11
+}
